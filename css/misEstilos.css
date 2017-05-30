@@ -1,0 +1,38 @@
+/*#divSuperior{
+    position: absolute;
+    top: -500px;
+    left: 0px;
+    background-color: #FFCC00;
+    width: 100%;
+    height: 654px;
+    text-align: center;
+}
+
+#divInferior{
+    position: absolute;
+    top: 500px;
+    left: 0px;
+    background-color: #FFCC00;
+    width: 100%;
+    height: 153px;
+    text-align: center;
+}*/
+body{
+    background-color: #808080
+}
+
+#divCentral{
+    position: absolute;
+    top: 145px;
+    left: 0px;
+    background-color: #0000FF;
+    width: 100%;
+    height: 350px;
+    text-align: center;
+}
+
+#divForm{
+    position: absolute;
+    top: 110px;
+    left: 95px;
+}

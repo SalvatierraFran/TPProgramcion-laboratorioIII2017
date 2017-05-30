@@ -109,10 +109,28 @@ class Usuario
         return TRUE;
     }
 
+    public static function TraerUsuarioLogueado($obj)
+    {
+        $objAcceso = AccesoDatos::DameUnObjetoAcceso();
+        $objConsulta = $objAcceso->RetornarConsulta("SELECT * FROM usuario WHERE (usuario = :usuario AND clave = :clave)");
+
+        $objConsulta->bindValue(':usuario', $obj->usuario, PDO::PARAM_STR);
+        $objConsulta->bindValue(':clave', $obj->clave, PDO::PARAM_STR);
+
+        $objConsulta->execute();
+
+        $miArray = array();
+
+        if($objConsulta->rowCount() != 1){
+            return false;
+        }
+        return $objConsulta->fetchObject('Usuario');
+    }
+
     public static function TraerTodosLosUsuarios()
     {
         $objAcceso = AccesoDatos::DameUnObjetoAcceso();
-        $objConsulta = $objAcceso->RetornarConsulta("SELECT  FROM usuarios");
+        $objConsulta = $objAcceso->RetornarConsulta("SELECT  FROM usuario");
 
         $objConsulta->execute();
 

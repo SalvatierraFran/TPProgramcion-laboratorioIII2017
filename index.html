@@ -7,21 +7,30 @@
     <title>Document</title>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="css/misEstilos.css">
 
+<script type="text/javascript" src="js/funcionesLogin.js"></script>
+<script type="text/javascript" src="js/misFunciones.js"></script>
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
 </head>
 <body>
 
-    <div class="container">
-        <div class="form-group">
-            <input type="text" class="form-control" name="usuario" placeholder="Ingrese usuario">
+    <div id="divSuperior"></div>
+    <div id="divCentral">   
+        <div class="container" id="divForm">
+            <div class="form-group">
+                <input type="text" class="form-control" name="usuario" id="usuario" value="admin" placeholder="Ingrese usuario">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" name="clave" id="clave" value="admin" placeholder="Ingrese clave">
+            </div>
+            <div class="form-group">
+                <input type="button" class="btn btn-primary" name="btnLogin" value="Login" onclick="Login()">
+            </div>        
         </div>
-        <div class="form-group">
-            <input type="password" class="form-control" name="clave" placeholder="Ingrese clave">
-        </div>
-        <div class="form-group">
-            <input type="button" class="btn btn-primary" name="btnLogin" value="Login">
-        </div>        
     </div>
+    <div id="divInferior"></div>
+    
     
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
